@@ -53,3 +53,12 @@ public class ControladorJuego {
             }
         } while(opcion != 3);
     }
+    //Metodo privado para mostrar el menu principal
+    private void mostrarMenuPrincipal() {
+        //Opciones del menu por pantalla
+        System.out.println("\n=== MENÚ PRINCIPAL ===");
+        System.out.println("1. Nueva partida");
+        System.out.println("2. Cargar partida");
+        System.out.println("3. Salir");
+        System.out.print("Elige: ");
+    }
