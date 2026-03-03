@@ -26,3 +26,15 @@ public class Inventario {
             items.put(item.TipoItem.PEZ, actual + 1);
         }
     }
+    //Método público para quitar un pez
+    public boolean quitarPez() {
+        //Obtiene la cantidad actual de peces
+        int actual = items.get(item.TipoItem.PEZ);
+        //Comprueba si hay al menos 1 pez
+        if (actual > 0) {
+            //Quita un pez y actualiza el mapa
+            items.put(item.TipoItem.PEZ, actual - 1);
+            return true;
+        }
+        return false;
+    }
