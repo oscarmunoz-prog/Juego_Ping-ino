@@ -18,3 +18,8 @@ public class ControladorTurnos {
      public Jugador getJugadorActual() {
         return jugadores.get(turnoActual);
     }
+     
+     public void siguienteTurno() {
+        turnoActual = (turnoActual + 1) % jugadores.size();
+    }
+}
