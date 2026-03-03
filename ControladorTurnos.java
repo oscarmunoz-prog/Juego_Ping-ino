@@ -10,3 +10,7 @@ public class ControladorTurnos {
     public ControladorTurnos() {
         this.turnoActual = 0;
     }
+     
+     public void setJugadores(List<Jugador> jugadores) {
+        this.jugadores = jugadores;
+    }
