@@ -27,3 +27,10 @@ public class ControladorJugador {
             
             jugadores.add(new Jugador(nombre, color, TipoJugador.HUMANO));
         }
+
+        // IA
+        if(incluirIA) {
+            jugadores.add(new Jugador("IA-Pingu", "Rojo", TipoJugador.IA));
+            System.out.println("IA añadida a la partida");
+        }
+    }
