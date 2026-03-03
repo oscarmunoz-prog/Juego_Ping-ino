@@ -78,3 +78,11 @@ public class Inventario {
     public int getBolasNieve() { return items.get(item.TipoItem.BOLA_NIEVE); }
     //Getter que devuelve la cantidad de dados
     public int getDados() { return items.get(item.TipoItem.DADO); }
+
+    //Método que devuelve un resumen del inventario formateado
+    public String obtenerResumen() {
+        //Plantilla del formato
+        return String.format("🐟 Peces: %d/2 | ❄️ Bolas: %d/6 | ⚡ Dados: %d/3",
+            getPeces(), getBolasNieve(), getDados());
+    }
+}
