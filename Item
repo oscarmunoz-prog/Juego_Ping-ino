@@ -1,13 +1,20 @@
 package src.JOCDELPINGU.Modelo;
 
+//Representa un objeto utilizable dentro del juego
 public class item {
+
+    //Tipos posibles de objetos del juego
     public enum TipoItem {
         PEZ, BOLA_NIEVE, DADO
     }
 
+    //Tipo del objeto
     private TipoItem tipo;
+
+    //Nombre descriptivo del objeto
     private String nombre;
     
+    //Inicializa el objeto segun su tipo
     public item(TipoItem tipo) {
         this.tipo = tipo;
         switch(tipo) {
@@ -17,6 +24,7 @@ public class item {
         }
     }
 
+    //Devuelve un simbolo visual representativo del objeto
     public String getSimbolo() {
         switch(tipo) {
             case PEZ: return "🐟";
