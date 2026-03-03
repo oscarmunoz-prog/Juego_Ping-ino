@@ -30,3 +30,5 @@ public class Tablero {
     public Casilla getCasilla(int index) {
         return casillas.get(index); //Devuelve la casilla en la posición index de la lista
     }
+    //Método que devuelve el tamaño del tablero
+    public int getTamano() { return TAMANO; }
