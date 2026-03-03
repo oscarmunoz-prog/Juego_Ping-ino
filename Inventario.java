@@ -16,3 +16,13 @@ public class Inventario {
         items.put(item.TipoItem.BOLA_NIEVE, 0);
         items.put(item.TipoItem.DADO, 1);      // Empiezan con 1 dado
     }
+    //Método público para añadir un pez al inventario
+    public void agregarPez() {
+        //Obtiene la cantidad actual de peces
+        int actual = items.get(item.TipoItem.PEZ);
+        //Comprueba si no ha llegado al máximo
+        if (actual < MAX_PECES) {
+            //Añade un pez
+            items.put(item.TipoItem.PEZ, actual + 1);
+        }
+    }
