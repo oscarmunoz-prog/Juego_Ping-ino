@@ -19,3 +19,9 @@ public class Jugador {
         this.inventario = new Inventario();
         this.historial = new ArrayList<>();
     }
+    
+    public int lanzarDado() {
+        int resultado = (int)(Math.random() * 6) + 1;
+        registrarAccion("Ha sacado un " + resultado);
+        return resultado;
+    }
