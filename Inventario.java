@@ -45,3 +45,12 @@ public class Inventario {
             items.put(item.TipoItem.BOLA_NIEVE, actual + 1);
         }
     }
+    //Método para quitar una bola de nieve
+    public boolean quitarBolaNieve() {
+        int actual = items.get(item.TipoItem.BOLA_NIEVE);
+        if (actual > 0) {
+            items.put(item.TipoItem.BOLA_NIEVE, actual - 1);
+            return true;
+        }
+        return false;
+    }
