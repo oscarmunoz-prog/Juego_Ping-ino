@@ -4,3 +4,15 @@ public class item {
     public enum TipoItem {
         PEZ, BOLA_NIEVE, DADO
     }
+
+    private TipoItem tipo;
+    private String nombre;
+    
+    public item(TipoItem tipo) {
+        this.tipo = tipo;
+        switch(tipo) {
+            case PEZ: this.nombre = "Pez"; break;
+            case BOLA_NIEVE: this.nombre = "Bola de nieve"; break;
+            case DADO: this.nombre = "Dado extra"; break;
+        }
+    }
