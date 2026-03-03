@@ -34,3 +34,10 @@ public class ControladorJugador {
             System.out.println("IA añadida a la partida");
         }
     }
+
+    public List<Jugador> getJugadores() { return jugadores; }
+    
+    public void registrarVictoria(Jugador ganador) {
+        System.out.println("¡" + ganador.getNombre() + " ha ganado!");
+    }
+}
