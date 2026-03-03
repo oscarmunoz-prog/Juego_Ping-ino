@@ -1,0 +1,36 @@
+package src.JOCDELPINGU.Controladores;
+
+import src.JOCDELPINGU.Modelo.*;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class ControladorJugador {
+    private List<Jugador> jugadores;
+    private Scanner scanner;
+    
+    public ControladorJugador() {
+        this.jugadores = new ArrayList<>();
+        this.scanner = new Scanner(System.in);
+    }
+
+    public void inicializarJugadores(int numHumanos, boolean incluirIA) {
+        jugadores.clear();
+        
+        // Jugadores humanos
+        for(int i = 1; i <= numHumanos; i++) {
+            System.out.print("Nombre del jugador " + i + ": ");
+            String nombre = scanner.nextLine();
+            System.out.print("Color de la ficha: ");
+            String color = scanner.nextLine();
+            
+            jugadores.add(new Jugador(nombre, color, TipoJugador.HUMANO));
+        }
+
+        // IA
+        if(incluirIA) {
+            jugadores.add(new Jugador("IA-Pingu", "Rojo", TipoJugador.IA));
+            System.out.println("IA añadida a la partida");
+        }
+    }
