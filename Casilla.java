@@ -1,0 +1,15 @@
+package src.JOCDELPINGU.Modelo;
+//Definimos el paquete de esta clase
+
+public class Casilla {
+    private int posicion;
+    private TipoCasilla tipo;
+//Creacion de atributos de posición y tipo
+
+    
+    public Casilla(int posicion, TipoCasilla tipo) {
+        this.posicion = posicion;
+        this.tipo = tipo;
+    }
+    //Contructores de los atributos anteriores, esto recibe la posición y el tipo de casilla en la que esta.
+    
