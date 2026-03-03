@@ -29,3 +29,16 @@ public class Jugador {
     public void registrarAccion(String accion) {
         historial.add(accion);
     }
+
+    // Getters y setters
+    public String getNombre() { return nombre; }
+    public String getColor() { return color; }
+    public TipoJugador getTipo() { return tipo; }
+    public int getPosicion() { return posicion; }
+    public void setPosicion(int posicion) { this.posicion = Math.max(0, Math.min(49, posicion)); }
+    public Inventario getInventario() { return inventario; }
+    public List<String> getHistorial() { return historial; }
+
+    public boolean esIA() {
+        return tipo == TipoJugador.IA;
+    }
