@@ -26,3 +26,7 @@ public class Tablero {
             casillas.add(new Casilla(i, tipos[aleatorio]));
         }
     }
+    //Método público para obtener una casilla por su posición
+    public Casilla getCasilla(int index) {
+        return casillas.get(index); //Devuelve la casilla en la posición index de la lista
+    }
